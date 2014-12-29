@@ -16,7 +16,7 @@ print "Enter any year: "
 number = gets
 
 begin
-  if(Integer(number) > 0)
+  if(Integer(number) >= 0)
     leapYear(Integer(number))
   else
     puts "Number you've entered is less than 0"
