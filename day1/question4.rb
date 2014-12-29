@@ -9,9 +9,8 @@ print "Enter room temperature in celsius: "
 celsius = gets
 
 #exception handling if input value is invalid
-
 begin
-    puts conversion(Float(celsius))
+  conversion(Float(celsius))
 rescue
   puts "Enter a valid temperature"
 end

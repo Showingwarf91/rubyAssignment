@@ -19,7 +19,7 @@ num = gets
 
 begin
   if(Integer(num)>0)
-    puts checkForPrime(Integer(num))
+    checkForPrime(Integer(num))
   else
     puts "Number you've entered is less than 0"
   end

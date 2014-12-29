@@ -17,7 +17,7 @@ number = gets
 
 begin
   if(Integer(number) > 0)
-    puts leapYear(Integer(number))
+    leapYear(Integer(number))
   else
     puts "Number you've entered is less than 0"
   end
