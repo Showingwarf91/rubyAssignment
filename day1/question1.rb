@@ -5,9 +5,7 @@ def leapYear(number)
   b = "Not leap year"
   if(number%400 == 0)
     puts a
-  elsif(number%100 == 0)
-    puts b
-  elsif(number%4 == 0)
+  elsif(number%100 != 0 && number%4 == 0)
     puts a
   else
     puts b
