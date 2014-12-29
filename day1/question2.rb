@@ -1,7 +1,7 @@
 
 print "enter first no "
 firstNumber=gets.to_i
-print "enter first no "
+print "enter second no "
 secondNumber=gets.to_i
 b=1
 puts firstNumber
