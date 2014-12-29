@@ -1,18 +1,28 @@
 
-print "enter any no"
-checkPrime=gets.to_i
-
-
-b=2;
-while (b<checkPrime)
-  if(checkPrime%b==0)
-    bol=true
+def checkForPrime(num)
+  count = 2;
+  while (count < num/2)
+    if(num%count == 0)
+      bol = true
+    end
+    count = count + 1
   end
-  b=b+1
-end
-if (bol!=true)
-  puts " prime"
-else
-  puts"composite"
+  if (bol != true)
+    puts "Is prime"
+  else
+    puts "Is composite"
+  end
 end
 
+print "Enter any no: "
+num = gets
+
+begin
+  if(Integer(num)>0)
+    puts checkForPrime(Integer(num))
+  else
+    puts "Number you've entered is less than 0"
+  end
+rescue
+  puts "Please enter a valid number"
+end

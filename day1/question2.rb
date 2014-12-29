@@ -1,15 +1,13 @@
+a = 0
+b = 1
+counter = 1
+puts a
+puts b
 
-print "enter first no "
-firstNumber=gets.to_i
-print "enter second no "
-secondNumber=gets.to_i
-b=1
-puts firstNumber
-puts secondNumber
-while(b<=20)
-  fibNumber=firstNumber+secondNumber
-  puts fibNumber
-  firstNumber =secondNumber
-  secondNumber =fibNumber
-  b=b+1
+while(counter <= 20)
+  c = a + b
+  puts c
+  a = b
+  b = c
+  counter = counter + 1
 end

@@ -1,4 +1,3 @@
-myStr=""
-print "enter any string"
-myStr=gets
-puts myStr.upcase
+print "Enter any string: "
+myStr = gets
+puts myStr.downcase

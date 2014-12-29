@@ -1,15 +1,28 @@
-getNumber=""
-print "enter any year "
-getNumber=gets
-getNumber=getNumber.to_i
 
-#leapyear
-if(getNumber%400==0)
-  puts "leap year"
-elsif(getNumber%100==0)
-  puts "not leap year"
-elsif(getNumber%4==0)
-  puts"leap year"
-elsed
-  puts"not leap year"
+def leapYear(number)
+  #leapyear
+  a = "Leap year"
+  b = "Not leap year"
+  if(number%400 == 0)
+    puts a
+  elsif(number%100 == 0)
+    puts b
+  elsif(number%4 == 0)
+    puts a
+  else
+    puts b
+  end
+end
+
+print "Enter any year: "
+number = gets
+
+begin
+  if(Integer(number) > 0)
+    puts leapYear(Integer(number))
+  else
+    puts "Number you've entered is less than 0"
+  end
+rescue
+  puts "Please enter a valid year"
 end
