@@ -1,7 +1,7 @@
 
 def checkForPrime(num)
-  count = 2;
-  while (count < num/2)
+  count = 2
+  while (count < Math.sqrt(num).ceil)
     if(num%count == 0)
       bol = true
     end
