@@ -18,7 +18,7 @@ print "Enter any no: "
 num = gets
 
 begin
-  if(Integer(num)>0)
+  if(Integer(num) > 0)
     checkForPrime(Integer(num))
   else
     puts "Number you've entered is less than 0"
