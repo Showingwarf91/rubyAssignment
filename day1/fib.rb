@@ -1,3 +1,4 @@
 require 'fibonacci'
 fib = Fibonacci.new
-fib.print(100)
+print "100th term of fibonacci series: "
+puts fib[100]
