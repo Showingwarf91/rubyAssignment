@@ -1,11 +1,10 @@
 
 def mapEach(new_array = nil)
-  len = 0
   map_array = []
-  while(len < new_array.length)
+  (0...new_array.length).each  do |len|
     map_array[len] = yield new_array[len]
-    len = len + 1
   end
+
  map_array
 end
 
