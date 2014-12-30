@@ -1,9 +1,9 @@
-def functionMy(b,total_sum)
+def functionMy(b, value)
   len = 0
   new_array = []
   new_array_size = 0
   while (len < b.length )
-    if(b[len] + new_array_size <= total_sum)
+    if(b[len] + new_array_size <= value)
       new_array.push(b[len])
       new_array_size += b[len]
       b.delete(b[len])
@@ -15,15 +15,15 @@ def functionMy(b,total_sum)
 end
 
 #a = [4,5,6,8,1,3]
-a=[1,2,3,4,5,6,7,8]
+a = [1,2,3,4,5,6,7,8]
 sum = a.inject{ |sum = 0,a |sum + a}
 n = 3
-flag=true
+flag = true
 if(sum%n == 0)
   b = a.sort.reverse
-  count=1
+  count = 1
   total_sum = sum / n
-  array=[]
+  array = []
   while(count <= n)
     array[count] = functionMy(b, total_sum)
     if (array[count] == [])
