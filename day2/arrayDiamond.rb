@@ -18,8 +18,8 @@ def valueDistribution(given_array, possible_value)
 end
 
 #a = [4,5,6,8,1,3]
-#a=[1,2,3,4,5]
-a = [2,2,2,2,1,1,3,2]
+a=[1,2,3,4,5]
+#a = [2,2,2,2,1,1,3,2]
 array_sum = a.inject{ |sum, a| sum + a}
 
 flag = true

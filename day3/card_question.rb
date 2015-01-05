@@ -17,10 +17,12 @@ class Card
     index = r.rand(@deck_hash.length)
     value_is = @deck_hash[index]
     @deck_hash.delete_at(index)
+    p index
+    p @deck_hash
   end
 end
 
-class Players < Card
+class Players
   attr_accessor :card_that_i_got
   def initialize
     self.card_that_i_got = []
@@ -30,31 +32,42 @@ class Players < Card
   end
 end
 
-class Game < Card
+class Game
   def initialize total_player
     @obj_players = []
     @total_player = total_player
   end
   def create_array
-    (0...@total_player).each do |max_player|
-      @obj_players[max_player] = Players.new
+    (0...@total_player).each do |x|
+      @obj_players[x] = Players.new
     end
-    @obj_players
   end
 
   def card_obtained
     (0...@total_player).each do |j|
-      rand_value = select_card
+      obj_card = Card.new
+      rand_value = obj_card.select_card
       @obj_players[j].pick_card rand_value
     end
+    #print @obj_players[0].card_that_i_got
   end
 
-
-end
+  def distribute
+    (1..MAX_DISTRIBUTE_CARD).each do |x|
+      card_obtained
+    end
+    (0...@total_player).each do |x|
+      #print "#{x+1} Player: #{@obj_players[x].card_that_i_got} \n"
+      #p @obj_players[0].card_that_i_got[0].values[1]
+      end
+    end
+    #end
+  end
 
 print "Enter no. of players: "
 total_players = Integer(gets)
 start_game = Game.new total_players
 start_game.create_array
-start_game.card_obtained
+start_game.distribute
+
 
